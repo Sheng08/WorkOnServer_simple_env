@@ -4,7 +4,6 @@ FROM ubuntu:20.04
 ARG UID
 ARG UserName
 ARG UserPWD
-ARG ENV_PATH=/home/env
 
 USER ${UserName}
 WORKDIR /home/${UserName}
@@ -17,8 +16,7 @@ RUN useradd -m ${UserName} -u ${UID} &&\
     apt-get -y upgrade &&\
     apt-get install -y git net-tools vim sudo tcsh gcc g++ unzip python3 python3-pip &&\
     apt-get clean &&\
-    rm -rf /var/lib/apt/lists/* &&\
-    mkdir ${ENV_PATH}
+    rm -rf /var/lib/apt/lists/*
 
 RUN pip3 --no-cache-dir install torch \
     torchvision \
