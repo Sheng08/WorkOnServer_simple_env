@@ -23,7 +23,7 @@ else
 		docker build --build-arg UID=$(id -u) \
 					 --build-arg UserName=$USER \
 					 --build-arg UserPWD=$USERPWD\
-					 -t $ImageName:$USER $dockerfile_path
+					 -t $ImageName:$USER --no-cache $dockerfile_path
 
 		docker run -it \
 				   -p $JupyterPort:$JupyterPort \
