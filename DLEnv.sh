@@ -14,6 +14,7 @@ echo UID=$(id -u)
 
 if [ $# -eq 0 ]; then
 	docker start -ia $ContainerName
+	docker exec -it $ContainerName bash
 else
 	if [ $1 == '--new' ]; then # create new container
 
