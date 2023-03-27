@@ -5,9 +5,6 @@ ARG UID
 ARG UserName
 ARG UserPWD
 
-USER ${UserName}
-WORKDIR /home/${UserName}
-
 # upgrade and get some module
 RUN useradd -m ${UserName} -u ${UID} &&\
     echo ${UserName}:${UserPWD} | chpasswd &&\
@@ -23,6 +20,9 @@ RUN pip3 --no-cache-dir install torch \
     torchaudio --extra-index-url https://download.pytorch.org/whl/cpu \
     tensorboard \
     jupyterlab
+
+USER ${UserName}
+WORKDIR /home/${UserName}
 
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
 
