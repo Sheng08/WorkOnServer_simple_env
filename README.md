@@ -17,7 +17,7 @@ ssh -L [bind_address]:<port>:<host>:<host_port> <SSH Server>
 ### Connect to Remote-Host
 Example:
 ```shell=
-ssh -L localhost:<port>:localhost:8888 user@remote-host_ip`
+ssh -L localhost:<port>:localhost:8888 user@remote-host_ip
 ```
 ---
 
