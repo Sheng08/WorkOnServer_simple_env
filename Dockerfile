@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
+FROM pytorch/pytorch:1.13.0-cuda11.6-cudnn8-devel
 
 # change user
 ARG UID
