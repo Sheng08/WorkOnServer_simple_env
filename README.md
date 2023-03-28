@@ -46,4 +46,10 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser
 ```
 <img width="1414" alt="image" src="https://user-images.githubusercontent.com/58781800/227942687-4b07fb44-ce30-47cf-bfdd-0dd90ec8bc3a.png">
 
+---
+
+```
+watch -n 2 nvidia-smi
+```
+
 ## 😃 You can modify this script and dockerfile as needed ~
