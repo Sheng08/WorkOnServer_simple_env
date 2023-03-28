@@ -17,7 +17,7 @@ RUN useradd -m ${UserName} -u ${UID} &&\
 
 RUN pip3 --no-cache-dir install torch \
     torchvision \
-    torchaudio --extra-index-url https://download.pytorch.org/whl/cpu \
+    torchaudio \
     tensorboard \
     jupyterlab
 
